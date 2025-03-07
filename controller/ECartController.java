@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.ECart1.entity.Laptops;
 import com.ECart1.service.Ecart1service;
 import com.ECart1.entity.Mobiles;
+import com.ECart1.entity.Watch;
 @CrossOrigin()
 @RestController
 
@@ -22,6 +23,9 @@ public class ECartController {
 	public List<Mobiles> getMobiles(){
 		return service.getAllMobiles();
 	}
-
+	@GetMapping("/watch")
+	public List<Watch> getWatch(){
+		return service.getAllWatches();
+	}
 }
 
